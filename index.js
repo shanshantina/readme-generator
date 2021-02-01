@@ -152,7 +152,6 @@ function writeToFile(fileName, data) {
 const createFile = util.promisify(writeToFile);
 
 // TODO: Create a function to initialize app
-
 // use async/await for init() function refer to https://www.npmjs.com/package/axios
 async function init() {
     try {

@@ -5,7 +5,7 @@ function renderLicenseBadge(license) {
     return '';
   }
   return `
-  ![License Badge](https://img.shields.io/badge/License-${license}-blue.svg)
+  ![License Badge](https://img.shields.io/badge/License-${license}-brightgreen.svg)
   `;  
 }
 
