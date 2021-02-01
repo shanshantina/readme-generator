@@ -5,6 +5,7 @@ const util = require('util');
 const axios = require('axios');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
+// link to github user api
 const api = {
     async getUser(userResponses) {
        try {
@@ -19,6 +20,7 @@ const api = {
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
+        // ask for github user name
         {
             type: 'input',
             name: 'username',
@@ -32,6 +34,7 @@ const questions = () => {
               }
             }  
         },
+        // ask for github repository name
         {
             type: 'input',
             name: 'repository',
@@ -45,6 +48,7 @@ const questions = () => {
               }
             }  
         },
+        // ask for project title
         {
             type: 'input',
             name: 'title',
@@ -58,6 +62,7 @@ const questions = () => {
                 }
             }
         },
+        // ask for description of the project
         {
             type: 'input',
             name: 'description',
@@ -71,43 +76,51 @@ const questions = () => {
                 }
             }
         },
+        // the installation information
         {
             type: 'input',
             name: 'installation',
             message: 'What are the steps required to install your project?'
         },
+        // instructions and examples of the project
         {
             type: 'input',
             name: 'usage',
-            message: 'Provide instructions and examples for use'
+            message: 'Provide instructions and examples for users'
         },
+        // choose the license of the project
         {
             type: 'list',
             name: 'license',
             message: 'Provide the license for your project',
             choices: ['MITLincense', 'GNUGPLv3', 'ApacheLincense 2.0', 'EclipsePubliceLicense2.0', 'MozillaPublicLicense2.0']
         },
+        // the guidelines of how to contribute to the project
         {
             type: 'input',
             name: 'contributing',
-            message: 'Provide gudielines for others to contribute to your project'
+            message: 'Provide guidelines for others to contribute to your project (Optional)'
         },
+        // testing example
         {
             type: 'input',
             name: 'tests',
-            message: 'Provide example of testing your application'
+            message: 'Provide example of testing your application (Optional)'
         },
+        // list of collaborators
         {
             type: 'input',
             name: 'credits',
-            message: 'List your collaborators'
+            message: 'List your collaborators (Optional)'
         },
+        // to confirm if user want to input the email address as contact info or not
         {
             type: 'confirm',
             name: 'confirmEmail',
             message: 'Would you like to enter your email address as contact information?',
             default: true
         },
+        // if user want to input the email address, show the part below for the input
         {
             type: 'input',
             name: 'email',
@@ -135,9 +148,12 @@ function writeToFile(fileName, data) {
     })
 }
 
+// promisify() refer to https://nodejs.org/dist/latest-v12.x/docs/api/util.html#util_util_promisify_original
 const createFile = util.promisify(writeToFile);
 
 // TODO: Create a function to initialize app
+
+// use async/await for init() function refer to https://www.npmjs.com/package/axios
 async function init() {
     try {
         const userResponses = await questions();

@@ -29,6 +29,7 @@ function renderLicenseSection(license) {
   This project is under license ${license}`;
 }
 
+// check if the email address is inputted by the user
 function emailAddress(email) {
   if(!email) {
     return '';
@@ -39,6 +40,7 @@ function emailAddress(email) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(userResponses, userInfo) {
+  // create table of contents
   let tableOfContent = `## Table of Contents`;
 
   if (userResponses.installation !== '') {tableOfContent += `
@@ -61,6 +63,7 @@ function generateMarkdown(userResponses, userInfo) {
   * [Tests](#tests)`
   };
 
+  //generate the README file base on user input
   return `
   # ${userResponses.title} 
 
@@ -101,4 +104,5 @@ function generateMarkdown(userResponses, userInfo) {
 `
 }
 
+// export markdown file to index.js
 module.exports = generateMarkdown;
