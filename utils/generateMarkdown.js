@@ -43,6 +43,10 @@ function generateMarkdown(userResponses, userInfo) {
   // create table of contents
   let tableOfContent = `## Table of Contents`;
 
+  if (userResponses.license !== '') {tableOfContent += `
+  * [License](#license)`
+  };
+
   if (userResponses.installation !== '') {tableOfContent += `
   * [Installation](#installation)` 
   };
@@ -55,13 +59,16 @@ function generateMarkdown(userResponses, userInfo) {
   * [Contributing](#contributing)`
   };
 
-  if (userResponses.license !== '') {tableOfContent += `
-  * [License](#license)`
-  };
-
   if (userResponses.tests !== '') {tableOfContent += `
   * [Tests](#tests)`
   };
+
+  if (userResponses.credits !== '') {tableOfContent += `
+  * [Credits](#credits)`
+  };
+
+  tableOfContent += `
+  * [Questions](#questions)`;
 
   //generate the README file base on user input
   return `
@@ -93,7 +100,7 @@ function generateMarkdown(userResponses, userInfo) {
   ## Credits
   ${userResponses.credits}
 
-  ## Questions?
+  ## Questions
   ![Developer Profile Picture](${userInfo.avatar_url})
 
   For any questions, please contact me with the information below:

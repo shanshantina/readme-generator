@@ -1,19 +1,21 @@
 
-  # weather-dashboard 
+  # Readme Generator 
 
   
   ![License Badge](https://img.shields.io/badge/License-MITLincense-blue.svg)
   
 
   ## Description
-  weather report
+  readme Generator
 
   ## Table of Contents
+  * [License](#license)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
-  * [License](#license)
   * [Tests](#tests)
+  * [Credits](#credits)
+  * [Questions](#questions)
 
   ## License
   
@@ -36,7 +38,7 @@
   ## Credits
   none
 
-  ## Questions?
+  ## Questions
   ![Developer Profile Picture](https://avatars.githubusercontent.com/u/77250536?v=4)
 
   For any questions, please contact me with the information below:
@@ -44,4 +46,3 @@
   GitHub: [@shanshantina](https://github.com/shanshantina)
 
   
-  Email: tinaxu84@gmail.com
