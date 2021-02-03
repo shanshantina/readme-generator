@@ -93,7 +93,7 @@ const questions = () => {
             type: 'list',
             name: 'license',
             message: 'Provide the license for your project',
-            choices: ['MITLincense', 'GNUGPLv3', 'ApacheLincense 2.0', 'EclipsePubliceLicense2.0', 'MozillaPublicLicense2.0']
+            choices: ['MIT', 'GPL3.0', 'Apache2.0', 'BSD3Clause', 'MPL2.0', 'EPL2.0']
         },
         // the guidelines of how to contribute to the project
         {
@@ -111,7 +111,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'credits',
-            message: 'List your collaborators (Optional)'
+            message: 'List your collaborators or resources'
         },
         // to confirm if user want to input the email address as contact info or not
         {

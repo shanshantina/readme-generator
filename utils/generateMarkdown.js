@@ -16,7 +16,7 @@ function renderLicenseLink(license) {
     return '';
   }
   return `
-  [License Link]${license}`;
+  [License Link](https://choosealicense.com/licenses/)`;
 }
 
 // TODO: Create a function that returns the license section of README
@@ -43,16 +43,16 @@ function generateMarkdown(userResponses, userInfo) {
   // create table of contents
   let tableOfContent = `## Table of Contents`;
 
-  if (userResponses.license !== '') {tableOfContent += `
-  * [License](#license)`
-  };
-
   if (userResponses.installation !== '') {tableOfContent += `
   * [Installation](#installation)` 
   };
 
   if (userResponses.usage !== '') {tableOfContent += `
   * [Usage](#usage)` 
+  };
+
+  if (userResponses.license !== '') {tableOfContent += `
+  * [License](#license)`
   };
 
   if (userResponses.contributing !== '') {tableOfContent += `
@@ -75,21 +75,23 @@ function generateMarkdown(userResponses, userInfo) {
   # ${userResponses.title} 
 
   ${renderLicenseBadge(userResponses.license)}
+  ![Language](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repository}?style=flat&logo=appveyor)
+  
 
   ## Description
   ${userResponses.description}
 
   ${tableOfContent}
 
-  ## License
-  ${renderLicenseLink(userResponses.license)}
-  ${renderLicenseSection(userResponses.license)}
-
   ## Installation
   ${userResponses.installation}
 
   ## Usage
   ${userResponses.usage}
+
+  ## License
+  ${renderLicenseSection(userResponses.license)}
+  ${renderLicenseLink(userResponses.license)}
 
   ## Contributing
   ${userResponses.contributing}
