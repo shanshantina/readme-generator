@@ -2,7 +2,7 @@
   # Readme Generator 
 
   
-  ![License Badge](https://img.shields.io/badge/License-MIT-brightgreen.svg) ![Language](https://img.shields.io/github/languages/top/shanshantina/readme-generator?style=flat&logo=appveyor)
+  ![License Badge](https://img.shields.io/badge/License-MIT-brightgreen.svg)![Language](https://img.shields.io/github/languages/top/shanshantina/readme-generator?style=flat&logo=appveyor)
   
 
   ## Description
@@ -37,7 +37,6 @@
 
   ## Credits
   The lists of resources used to complete this challenge: <br/> 1. Module 9 Node.js from canvas. <br/> 2. Google (https://www.google.ca/) <br/> 3. MDN Web Docs (https://developer.mozilla.org/en-US/docs/Web/JavaScript). <br/> 4. NPM - inquirer (https://www.npmjs.com/package/inquirer). <br/> 5. NPM - axios (https://www.npmjs.com/package/axios). <br/> 6. Node.js - fs.writeFile (https://nodejs.org/dist/latestv12.x/docs/api/fs.html#fs_fs_writefile_file_data_options_callback) <br/> 7. Node.js - util.promisity() (https://nodejs.org/dist/latest-v12.x/docs/api/util.html#util_util_promisify_original). <br/> 8. Shields (https://shields.io/) <br/> 9. Choose A License (https://choosealicense.com/licenses/) <br/> 10. Supports from instructor, assistant instructor and Tutor.
-
 
   ## Questions
   ![Developer Profile Picture](https://avatars.githubusercontent.com/u/77250536?v=4)
