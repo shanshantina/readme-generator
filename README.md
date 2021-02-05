@@ -2,7 +2,7 @@
   # Readme Generator 
 
   
-  ![License Badge](https://img.shields.io/badge/License-MIT-brightgreen.svg)![Language](https://img.shields.io/github/languages/top/shanshantina/readme-generator?style=flat&logo=appveyor)
+  ![License Badge](https://img.shields.io/badge/License-MIT-brightgreen.svg) ![Language](https://img.shields.io/github/languages/top/shanshantina/readme-generator?style=flat&logo=appveyor)
   
 
   ## Description
